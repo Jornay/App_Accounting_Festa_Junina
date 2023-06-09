@@ -1,4 +1,6 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
+import {  useFonts, Roboto_500Medium } from '@expo-google-fonts/roboto';
+
 import React, { useState } from 'react'
 
 export default function Page() {
@@ -15,8 +17,15 @@ export default function Page() {
     countQueijo: 0,
     countFrango: 0,
   });
+  let [fontsLoaded] = useFonts({
+    Roboto_500Medium,
+  });
 
+  if (!fontsLoaded) {
+    return null;
+  }
   const handleClick = (type: keyof Counters) => {
+
     setCounters((prevCounters) => ({
       ...prevCounters,
       [type]: prevCounters[type] + 1,
@@ -24,8 +33,10 @@ export default function Page() {
   }
   return (
     <View style={styles.container}>
+      <View>
+        <Text style={styles.titleCentral}>Festa Junina - Filhos do céu</Text>
+      </View>
       <View style={styles.row}>
-
         <View style={styles.square}>
           <Text style={styles.title}>Pastel: Carne </Text>
           <TouchableOpacity style={styles.button} onPress={ ()=> handleClick('countCarne')}>
@@ -89,17 +100,22 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   button: {
-    backgroundColor: 'blue',
     borderRadius: 5,
   },
   buttonImage: {
-    width: 130,
-    height: 130,
+    width: 120,
+    height: 120,
+    borderRadius: 10,
+
   },
   title: {
     fontSize: 16,
     fontWeight: 'bold',
     margin: 10
+  },
+  titleCentral: {
+    fontSize: 16,
+    fontFamily:'Roboto_500Medium',
   },
   textCounter: {
     fontSize: 15,
