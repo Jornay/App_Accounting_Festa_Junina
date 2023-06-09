@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "scheme": "acme",
+    "web": {
+      "bundler": "metro"
+    },
+    "name": "App_Accounting_Festa_Junina",
+    "slug": "App_Accounting_Festa_Junina"
+  }
+}
