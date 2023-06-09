@@ -1,15 +1,18 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Button } from "react-native";
+import React, {useState} from 'react'
 
 export default function Page() {
+
+  const [count, setCount] = useState(0)
+
+  const handleClick = () => {
+    setCount(count + 1)
+  }
   return (
     <View style={styles.container}>
       <View style={styles.main}>
-        <Text style={styles.title}>Seja bem vindo! </Text>
-        <Text style={styles.subtitle}>app de teste!</Text>
-
-        <Image
-          source={require('../public/gato.jpg')}
-        />
+        <Text style={styles.title}>Quantidade de cliques: {count} </Text>
+        <Button title="Clique aqui" onPress={handleClick}></Button>
       </View>
     </View>
   );
@@ -18,9 +21,10 @@ export default function Page() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: 'center',
     alignItems: "center",
     padding: 24,
-    backgroundColor: "#F5F5DC"
+    backgroundColor: "#FFFFFF"
   },
   main: {
     flex: 1,
