@@ -19,9 +19,9 @@ const countersList: Counter[] = [
   { id: 'countCarne', title: 'Pastel: Carne', image: require('../src/assets/images/pastel_carne.jpg') },
   { id: 'countPizza', title: 'Pastel: Pizza', image: require('../src/assets/images/pastel_pizza.jpg') },
   { id: 'countQueijo', title: 'Pastel: Queijo', image: require('../src/assets/images/pastel_queijo.jpg') },
-  { id: 'countQueijo', title: 'Bebida: Refrigerante', image: require('../src/assets/images/refrigerante.jpg') },
-  { id: 'countQueijo', title: 'Bebida: Cerveja', image: require('../src/assets/images/cerveja.jpg') },
-  { id: 'countQueijo', title: 'Bebida: DelVale', image: require('../src/assets/images/delvale.jpg') },
+  { id: 'countQueijo', title: 'Bebida: Refrigerante', image: require('../src/assets/images/pastel_queijo.jpg') },
+  { id: 'countQueijo', title: 'Bebida: Cerveja', image: require('../src/assets/images/pastel_queijo.jpg') },
+  { id: 'countQueijo', title: 'Bebida: DelVale', image: require('../src/assets/images/pastel_queijo.jpg') },
 ]
 
 export default function Page() {
